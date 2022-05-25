@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="250"
+        motion:motionInterpolator="easeInOut">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/carouselBackground"
+            motion:touchAnchorSide="bottom" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="0.45"
+                android:scaleY="0.45"
+                android:translationX="75dp"
+                android:translationY="0dp"
+                motion:framePosition="30"
+                motion:motionTarget="@id/carouselView" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/carouselBackground"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/collapsedBankAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintBottom_toTopOf="@id/carouselView"
+            motion:layout_constraintEnd_toEndOf="@id/carouselView"
+            motion:layout_constraintStart_toStartOf="@id/carouselView" />
+        <Constraint
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@id/carouselBackground"
+            motion:layout_constraintEnd_toEndOf="@id/carouselBackground"
+            motion:layout_constraintStart_toStartOf="@id/carouselBackground"
+            motion:layout_constraintTop_toTopOf="@id/carouselBackground" />
+        <Constraint
+            android:id="@+id/settingsView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/carouselBackground"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/collapsedBankAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintBottom_toBottomOf="@id/carouselBackground"
+            motion:layout_constraintStart_toStartOf="@id/carouselBackground"
+            motion:layout_constraintTop_toTopOf="@id/carouselBackground"
+            motion:layout_constraintVertical_bias="0.4" />
+        <Constraint
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleX="0.45"
+            android:scaleY="0.45"
+            android:translationX="75dp"
+            android:translationY="-200dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/carouselBackground"
+            motion:layout_constraintEnd_toEndOf="@id/carouselBackground"
+            motion:layout_constraintStart_toStartOf="@id/carouselBackground"
+            motion:layout_constraintTop_toTopOf="@id/carouselBackground" />
+        <Constraint
+            android:id="@+id/settingsView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+</MotionScene>

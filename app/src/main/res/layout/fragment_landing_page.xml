@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landingPageMotionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackground"
+    app:layoutDescription="@xml/collapsing_animation_scene">
+
+    <View
+        android:id="@+id/carouselBackground"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/ic_landing_page_carousel_background"
+        android:elevation="20dp" />
+
+    <ImageView
+        android:id="@+id/settingsView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/fragment_landing_page_settings_content"
+        android:elevation="30dp"
+        android:src="@drawable/ic_settings" />
+
+    <TextView
+        android:id="@+id/collapsedBankAccountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:text="Bank account 1" />
+
+    <com.example.ircchatbot.view.custom.CarouselViewPager
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:elevation="30dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/operationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carouselBackground"
+        tools:listitem="@layout/item_operations_recycler_view" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

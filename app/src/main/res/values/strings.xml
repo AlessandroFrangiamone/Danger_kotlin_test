@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IRC ChatBot</string>
+    <string name="fragment_landing_page_settings_content">Pulsante impostazioni</string>
+    <string name="fragment_landing_page_settings">Impostazioni</string>
+    <string name="fragment_settings_dark_mode_text">Modalità notte</string>
+    <string name="bank_account_circuit_content_description">Immagine circuito</string>
+</resources>
