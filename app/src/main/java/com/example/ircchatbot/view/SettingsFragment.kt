@@ -25,6 +25,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_settings, container, false)
+        var i = 0
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
