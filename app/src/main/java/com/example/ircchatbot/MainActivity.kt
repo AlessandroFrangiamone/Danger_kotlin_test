@@ -14,6 +14,7 @@ import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventList
 
 class MainActivity : AppCompatActivity() {
 
+    var i: Int? = 5
 
     /**
      * [AppCompatActivity] functions
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         )
+
+        var j: Int = i!!
     }
 
     /**

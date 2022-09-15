@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="KotlinCompilerSettings">
+    <option name="scriptTemplates" value="systems.danger.kts.DangerFileScript" />
+    <option name="scriptTemplatesClasspath" value="/usr/local/lib/danger/danger-kotlin.jar" />
+  </component>
+</project>
