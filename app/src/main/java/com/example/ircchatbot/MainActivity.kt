@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         var j: Int = i!!
+        var m: Int = i!!
     }
 
     /**
