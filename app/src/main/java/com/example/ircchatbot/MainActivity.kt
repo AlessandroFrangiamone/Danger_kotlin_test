@@ -11,8 +11,11 @@ import com.example.ircchatbot.view.adapter.PagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener
+import systems.danger.kotlin.*
 
 class MainActivity : AppCompatActivity() {
+
+    var i: Int? = 5
 
     var i: Int? = 5
 
