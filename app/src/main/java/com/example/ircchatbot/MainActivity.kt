@@ -15,6 +15,7 @@ import systems.danger.kotlin.*
 
 class MainActivity : AppCompatActivity() {
 
+    var i: Int? = 5
 
     var i: Int? = 5
 
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity() {
             }
         )
 
-        //var j: Int = i!!
+        var j: Int = i!!
+        var m: Int = i!!
     }
 
     /**
